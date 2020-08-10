@@ -1,0 +1,78 @@
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+body{
+  min-width: 350px;
+}
+*, *::before, *::after{
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.App-header {
+  background-color: #000000;
+  min-height: calc(30px + 2vmin);;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: #fff;
+  background-color: #306c8b;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 5px;
+}
+.App-header h4{
+  margin-top: 20px;
+  font-weight: 200;
+}
+select{
+  border-radius: 2px;
+  border: none;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  letter-spacing: 2px;
+  background-color: rgb(234, 240, 241);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 0px auto;
+  margin: 5px auto 3px;
+}
+
+@media screen and (min-width: 2200px){
+  *{
+    font-size: 32px;
+  }
+  header h2{
+    font-size: 70px;
+  }
+  header h4{
+    font-size: 55px;
+  }
+  select{
+    width: 30%;
+    height: 65px;
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 3200px){
+  *{
+    font-size: 42px;
+  }
+  header h2{
+    font-size: 90px;
+  }
+  header h4{
+    font-size: 75px;
+  }
+}
+@media screen and (max-width: 600px){
+  select{
+    width: 90%;
+  }
+}

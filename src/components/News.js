@@ -5,14 +5,14 @@ const News = ()=>{
    const [newsData, setNewsData] = useState(null);
    const [updated, setUpdated] = useState(false);
    useEffect((newsData)=>{
-      fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=a9f91860669c429ea84c73cc65388adc&cuontry=us&q=COVID")
+      fetch("https://newsapi.org/v2/everything?apiKey=a9f91860669c429ea84c73cc65388adc&q=COVID&pageSize=7&language=en&qInTitle=(COVID)AND(CORONA)")
       .then(res => res.json())
       .then(info => {
          setNewsData(info)
          setUpdated(true);
       })
    },[updated])
-
+   
    let dataJSX = ()=>{
       if(newsData){
          return newsData.articles.map((item, index)=>{

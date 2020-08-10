@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
+import '../src/Styles/App.css';
 import Content from './components/Content';
 import Graph from './components/Graph';
 import News from './components/News';
@@ -26,7 +26,7 @@ const App = () => {
       setRecovered(summary.Countries[countryIndex].TotalRecovered.toLocaleString());
       setDead(summary.Countries[countryIndex].TotalDeaths.toLocaleString());
     }
-  }
+  } 
   // Data Summary fetch at launch
   useEffect( () =>  {
     fetch('https://cors-anywhere.herokuapp.com/https://api.covid19api.com/summary')
@@ -51,11 +51,11 @@ const App = () => {
   return(
     <div className="App">
       <header className="App-header">
-        <h2>Covid 19</h2>
+        <h2>Covid-19</h2>
         <div>
           <h4>Select Region</h4>
           <select id='region' onChange={changeRegion} value = { regionSelected}>
-            <option value={'world'} >World</option>
+            <option value={'world'} >WORLD</option>
             {countries.map(item => <option key={item} value={item}> {item.toUpperCase()} </option>)}
           </select>
         </div>
@@ -66,5 +66,4 @@ const App = () => {
   </div>
   )
 }
-
 export default App;

@@ -4,18 +4,20 @@ import CanvasJSReact from '../assets/canvasjs.react';
 
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 const Graph = props => {
-    const [dataCache, setDataCache] = useState({});
-    const [options, setOptions] = useState(
-        {
+    const [dataCache, setDataCache] = useState({});// data cache
+    // function to display loading in the graph section
+    const loading = ()=>{
+        return {
             title: {
-              text: 'Select Country'
+            text: 'Loading'
             },
             data: [{				
                 type: "line",
                 dataPoints: [{'x': "", 'y': ""}]
             }]
-        }
-    );
+        };
+    }
+    const [options, setOptions] = useState(loading());
     useEffect(()=>{
         // if the "world" drop down gets selected... set default data.
         if(props.regionSelected === 'world') setOptions(
@@ -46,7 +48,8 @@ const Graph = props => {
                 });
             } else{
                 // else, fetch the new data.
-                let allInfected = '';
+                setOptions(loading());// Display loading while data is being fetched.
+                let allInfected = ''; // Holds the fetched data temporarily.
                 fetch("https://cors-anywhere.herokuapp.com/https://api.covid19api.com/total/dayone/country/" + props.regionSelected)
                 .then(res => res.json())
                 .then(info => {
@@ -59,11 +62,10 @@ const Graph = props => {
                 })
                 // set the new graph data
                 .then(()=>{
-                    // Cache the data to prevent multiple fetch calls
                     const newData = dataCache;
                     newData[props.regionSelected] = allInfected;
-                    setDataCache(newData);
-                    //set data
+                    setDataCache(newData); // Set cache data. Prevents multiple fetch calls
+                    // Set options data
                     setOptions({
                         title: {
                         text: props.regionSelected.toUpperCase() + ': Cases'
@@ -80,7 +82,7 @@ const Graph = props => {
         };// end of else if
       
     },[props.regionSelected, dataCache]);
-    // return null or no region or world is selected. (removes the graph). Else, display the graph.
+    // return null if no region or world is selected. (removes the graph). Else, display the graph.
     if(!props.regionSelected || props.regionSelected === 'world') return null;
     else return (
         <div  className='graph'>
