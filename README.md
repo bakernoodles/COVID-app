@@ -34,7 +34,7 @@
 ![Site Preview](https://raw.githubusercontent.com/bakernoodles/COVID-app/master/src/assets/sitePreview.png)
 
 ## thoughts...
-^ I made this web application for fun. I wish i was able to do more regarding the data displayed but i was held back by the limited data i was allowed to use from the APIs.
+> I made this web application for fun. I wish i was able to do more regarding the data displayed but i was held back by the limited data i was allowed to use from the APIs.
 
 ---
 App by: *Christopher Yniguez*
