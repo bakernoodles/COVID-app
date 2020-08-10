@@ -28,7 +28,7 @@ const Graph = props => {
                     dataPoints: [{'x': "", 'y': 0}]
                 }]
             }
-        ); // end of useEffect()
+        ); 
         // Else, check which region is selected.
         else if(props.regionSelected){
             // check if the data has already been searched and cached...if so, grab that data and display it.
@@ -79,7 +79,8 @@ const Graph = props => {
             } // end of else
         };// end of else if
       
-    },[props.regionSelected, dataCache])
+    },[props.regionSelected, dataCache]);
+    // return null or no region or world is selected. (removes the graph). Else, display the graph.
     if(!props.regionSelected || props.regionSelected === 'world') return null;
     else return (
         <div  className='graph'>
