@@ -1,0 +1,78 @@
+.contentArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+.cardArea{
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    justify-content: space-evenly;
+    margin: 5px;
+}
+.cardArea h2{
+    color: #ad2920;
+    margin-top: 40px;
+    font-weight: 600;
+} 
+.cardArea h4{
+    font-weight: 400;
+} 
+.cards{
+    background-color: #c4eaff;
+    padding: 17px;
+    border-radius: 3px;
+    width: 33.1%;
+    letter-spacing: 3px;
+    color: #000;
+    box-shadow:  3px 3px 5px rgba(23, 64, 145, 0.027);
+    text-transform: uppercase;
+}
+.greenText{
+    color: rgb(23, 97, 158)!important;
+}
+.blackText{
+    color: rgb(53, 53, 53)!important;
+}
+.graph{
+    width: 60vw;
+    background-color: rgb(245, 251, 255);
+    align-self: center;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    background-color: rgb(247, 251, 255);
+
+}
+
+@media screen and (max-width: 750px){
+    .cardArea{
+        width: 100%;
+    }
+    .graph{
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+}
+@media screen and (max-width: 566px){
+    .cardArea{
+        flex-direction: column;
+    }
+    .cards{
+        width: 100%;
+        height: 57px;
+        padding: 4px;
+        margin: 1px;
+    }
+    .cardArea h3{
+        margin: 5px;
+        font-size: 14px;
+    }
+    .cardArea h2{
+        margin: 5px;
+        font-size: 16px;
+    }
+    
+}
+
