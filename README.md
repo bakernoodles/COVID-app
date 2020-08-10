@@ -8,7 +8,7 @@
    - Cases calculated by: Infected - (Recovered + Deaths)
 - Shows recent top news articles.
    
-   - The number of News articles displayed is random and usualy around 4 (more ro less). The api returns the top articles from various news sources.
+   - The number of News articles displayed is 7. The api returns top articles from different news sources.
 
 ---
 ## APIs used
@@ -34,7 +34,7 @@
 ![Site Preview](https://raw.githubusercontent.com/bakernoodles/COVID-app/master/src/assets/sitePreview.png)
 
 ## thoughts...
-I made this web application for fun. I wish i was able to do more regarding the data displayed but i was held back by the limited data i was allowed to use from the APIs.
+^ I made this web application for fun. I wish i was able to do more regarding the data displayed but i was held back by the limited data i was allowed to use from the APIs.
 
 ---
 App by: *Christopher Yniguez*
