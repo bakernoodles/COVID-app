@@ -28,7 +28,7 @@
 
 1. When the graph is fetching new data for a new region, the previous regional data is still displayed. I plan to add a 'Loading data' fix some other time.
 
-2. I plan to add more error checking if data fails to fetch for whatever reason.
+2. I plan to add more error checking if data fails to fetch for whatever reason. Also, the data being fetched can either come back extremely fast, or take a few seconds(probably due to heavy use worldwide).
 
 3. While not necessarily a bug, I recognize that I could do better with the file organization. I can and I WILL do better next time.
 
