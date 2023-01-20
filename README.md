@@ -5,7 +5,6 @@
 - Shows **infected**, **Recovered**, **Deaths** for a region or world.
 - Displays a graph timeline of all cases recorded for a region.
 
-   - Cases calculated by: Infected - (Recovered + Deaths)
 - Shows recent top news articles.
    
    - The number of News articles displayed is 7. The api returns top articles from different news sources.
